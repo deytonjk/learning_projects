@@ -9,7 +9,7 @@ import pandas as pd
 from scipy import stats
 
 # Load Ex 3 data file
-emp_data = pd.read_csv("C://Users//josh_//Desktop//CSCI-5047 Data Analytics and Visualization//Salary Data - Ex3.csv")
+emp_data = pd.read_csv("./salay_data3.csv")
 print(emp_data.head())
 
 #find the covariance
@@ -31,5 +31,6 @@ results_table = pd.DataFrame([[' ', 'Covariance', 'Correlation', 'p-Value'],
                               ])
 # p-value was showing as 0.0 so this puts the table in scientific notation
 pd.set_option('display.float_format', '{:.2E}'.format)
+
 
 print(results_table)
