@@ -12,7 +12,7 @@ import statistics as stats
 
 
 #Load the data
-salary_df = pd.read_csv("C:\\Users\\josh_\\Desktop\\CSCI-5047 Data Analytics and Visualization\\Salary Data - Ex2.csv")
+salary_df = pd.read_csv(".\salary_data2.csv")
 print(salary_df.head())
 
 #Calculate the stats for the requested columns and put in a easily viewable table
@@ -73,3 +73,4 @@ salary_sdv = round(stats.stdev(salary_df['salary']), 2) # or we could have just 
 
 print('The variance of salaries in this table is', salary_var, '.')
 print('The standard deviation of salaries in this table is', salary_sdv, '.')
+
