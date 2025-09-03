@@ -10,7 +10,7 @@ import random
 import numpy as np
 
 # Load Income Dirty Data file
-people_df_dirty = pd.read_csv("C://Users//josh_//Desktop//CSCI-5047 Data Analytics and Visualization//Income Dirty Data.csv", index_col='ID')
+people_df_dirty = pd.read_csv("./income_dirty_data.csv", index_col='ID')
 
 print(people_df_dirty.head())
 print(people_df_dirty.shape)
@@ -168,4 +168,5 @@ for column in cols:
     NumOnan = final_people_df[column].isna().sum().iloc[0]
     stat_list.append([column, NumOnan])
 print(pd.DataFrame(stat_list))
+
 
