@@ -15,7 +15,7 @@ import statsmodels.api as sm
 from statsmodels.formula.api import ols
 
 #load the data
-album_df = pd.read_csv("C:\\Users\\josh_\\Desktop\\CSCI-5047 Data Analytics and Visualization\\Lab Album Sales.csv")
+album_df = pd.read_csv(".\album_sales.csv")
 
 #see what it looks like
 print(album_df.head())
@@ -92,6 +92,7 @@ print(lm2.summary())
 pred_dict={'AdvertBudget':135, 'AirplayTimes': np.mean(album_df['AirplayTimes']), 'AttractivenessScore': np.mean(album_df['AttractivenessScore'])}
 
 print('\n\nModel 2 Prediction: ', lm2.predict(pred_dict), '\n\n')
+
 
 
 
