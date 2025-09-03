@@ -1,5 +1,5 @@
 # Load Ex 3 data file
-emp_data = read.csv("C:/Users/josh_/Desktop/CSCI-5047 Data Analytics and Visualization/Salary Data - Ex3.csv", header = TRUE)
+emp_data = read.csv("./salary_data3.csv", header = TRUE)
 head(emp_data)
 
 # pull out the desired columns
@@ -42,3 +42,4 @@ results_output=as.table(results)
 
 # display
 results_output
+
