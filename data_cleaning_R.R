@@ -1,4 +1,4 @@
-data = read.csv("C:/Users/josh_/Desktop/Data Analytics and Visualization CSCI-5047/Exercise 4 - Data Preprocessing/Income Dirty Data.csv", header = TRUE)
+data = read.csv("./income_dirty_data.csv", header = TRUE)
 head(data)
 
 # number of empty cells
@@ -18,4 +18,5 @@ cr = correctionRules(expression(if(!is.na(age) & age <18) age = NA,
                                 ))
 corule = correctWithRules(cr, data)
 newdata = corule$corrected
+
 
