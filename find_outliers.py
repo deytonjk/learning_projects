@@ -2,6 +2,10 @@
 """
 Created on Tue Apr 22 16:16:49 2025
 
+FINDING OUTLIERS IN A DATASET 
+using standard deviation and using DBSCAN
+for multivariate outliers
+
 @author: josh_
 """
 
@@ -11,7 +15,7 @@ import matplotlib.pyplot as plt
 import statistics as sts
 import plotly.express as px
 
-df = pd.read_csv("C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Exercise 13 - Outliers\\carsDataset.csv")
+df = pd.read_csv(".\cars_dataset.csv")
 
 cars_df = df[['cars.features', 'mpg', 'qsec', 'hp']]
 
@@ -67,7 +71,7 @@ fig.show()
 #### BANK DATA #####
 
 
-bank_df = pd.read_csv("C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Exercise 13 - Outliers\\bankloan.csv")
+bank_df = pd.read_csv(".\bank_loan.csv")
 
 # create boxplots of the bank data
 fig, (ax1, ax2, ax3, ax4, ax5, ax6, ax7) = plt.subplots( 7, 1, figsize=(10,40))
@@ -121,6 +125,7 @@ outliers = bank_df.iloc[(clusters == -1).nonzero()]
 
 print(outliers)
 
-outliers.to_csv('C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Exercise 13 - Outliers\\bank_outliers.csv')
+outliers.to_csv('.\bank_outliers.csv')
+
 
 
