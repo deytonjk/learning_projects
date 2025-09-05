@@ -2,6 +2,10 @@
 """
 Created on Thu May  1 10:33:07 2025
 
+USING scipy AND scikit-learn TO GET STATISTICS ON NETWORK TRAFFIC DATA
+AND CLASSIFY TRAFFIC AS NORMAL OR SUSPICIOUS
+
+
 @author: josh_
 """
 
@@ -14,7 +18,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
 # load data
-net_data = pd.read_csv("C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Project - Putting it all together\\Network Traffic Data.csv")
+net_data = pd.read_csv(".\network_traffic_data.csv")
 print(net_data.head())
 
 for column in net_data.columns:
@@ -60,6 +64,7 @@ print(metrics.classification_report(y_test, y_pred1))
 disp.plot()
 
 plt.show()
+
 
 
 
