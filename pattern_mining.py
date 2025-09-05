@@ -3,13 +3,19 @@
 Created on Sun Mar 23 21:50:13 2025
 
 @author: josh_
+
+THIS script uses python's apyori libary to look for association rules
+for survivors of the Titanic (adult/child, gender, passenger class) 
+
 """
+
+
 
 import pandas as pd
 from apyori import apriori
 
 # load and check data
-titanic_df = pd.read_csv("C:\\Users\\josh_\\Desktop\\CSCI-5047 Data Analytics and Visualization\\TitanicData.csv")
+titanic_df = pd.read_csv(".\titanic_data.csv")
 
 # in the excel file, the columns titles were misaligned, so i fixed that in excel before loading
 # here i dropped the first column (now unnamed) because it was irrelevant to this process
@@ -54,6 +60,7 @@ print('\nNumber of rules: ', len(filtered_results))
 filtered_results.sort(key=lambda x: x.lift, reverse=True)
 
 died_df = pd.DataFrame(filtered_results)
+
 
 
 
