@@ -2,12 +2,16 @@
 """
 Created on Sun Apr 13 21:48:21 2025
 
+This file uses python's scikit-learn library to create client clusters for 
+efficient dividing up the client sales calls among salesmen
+
+
 @author: josh_
 """
 
 import pandas as pd
 
-df = pd.read_csv("C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Exercise 12 - Clustering\\PotentialClients.csv")
+df = pd.read_csv(".\potential_clients.csv")
 
 df.head()
 
@@ -132,5 +136,6 @@ plt.scatter(centroids[:, 0], centroids[:, 1], marker='*', c='red', s=70, alpha=0
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Potential Client Groups')
+
 
 
