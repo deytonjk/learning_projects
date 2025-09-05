@@ -13,7 +13,7 @@ from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
 
 
-data = pd.read_csv("C:\\Users\\josh_\\Desktop\\CSCI-5047 Data Analytics and Visualization\\ClassificationLabData.csv")
+data = pd.read_csv(".\classification_lab_data.csv")
 
 print(data.head())
 
@@ -121,4 +121,5 @@ specificity = tn / (tn + fp)
 
 print( 'Naive Bayes Sensitivity: ', sensitivity)
 print('Naive Bayes Specificity:', specificity)
+
 
