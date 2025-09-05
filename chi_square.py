@@ -3,6 +3,10 @@
 Created on Mon Apr  7 13:28:28 2025
 
 @author: josh_
+
+AN EXERCISE IN CALCULATING CHI-SQUARE STATISTICS AND
+USING THE scipy python library to do it
+
 """
 
 import pandas as pd
@@ -10,7 +14,7 @@ import numpy as np
 
 
 
-df = pd.read_csv("C:\\Users\\josh_\\Desktop\\Data Analytics and Visualization CSCI-5047\\Americandata.csv")
+df = pd.read_csv(".\american_data.csv")
 df1 = df # a spare copy
 #TOTAL YES
 total_yes = 0    
@@ -65,3 +69,4 @@ from scipy.stats import chi2_contingency
 chi2_stat, p_value, dof, expected = chi2_contingency(df1)
 
 print('The chi-square statistic is', chi_square, '.\nThe p-value here is', p_value,'.')
+
